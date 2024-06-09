@@ -1,44 +1,10 @@
 
-
-// export default [
-//   {
-//     input: 'src/stories/index.ts',
-//     output: [
-//       {
-//         file: packageJson.main,
-//         format: 'cjs',
-//         sourcemap: true,
-//       },
-//       {
-//         file: packageJson.module,
-//         format: 'esm',
-//         exports: 'named',
-//         sourcemap: true,
-//       },
-//     ],
-//     plugins: [
-//     typescript() ,
-//       peerDepsExternal(),
-//       resolve({
-//         extensions: ['.js', '.jsx'],
-//       }),
-//       commonjs(),
-//       terser(),
-//       babel({
-//         extensions: ['.js', '.jsx'],
-//         exclude: 'node_modules/**',
-//       }),
-//     ],
-//     external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
-//   },
-// ];
-
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import { babel } from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 // This is required to read package.json file when
 // using Native ES modules in Node.js
@@ -62,7 +28,7 @@ export default {
     },
   ],
   plugins: [
-    peerDepsExternal(),
+    external(),
     resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx']
       }),
