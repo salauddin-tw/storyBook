@@ -3,7 +3,8 @@
 exports[`Button test should render button 1`] = `
 <div>
   <button
-    class="sc-aYaIB eCpUyc storybook-button--medium storybook-button--secondary"
+    buttonsize="medium"
+    class="sc-aYaIB kJktPT"
   >
     test
   </button>

@@ -1,12 +1,11 @@
 import React from "react"
 import logo from "./logo.svg"
-import { Button, Page } from "./stories"
+import { Button } from "./stories"
 import "./App.css"
 
 function App() {
   return (
     <div className="App">
-      <Page />
       <header className="">
         <Button label="Buttonss" size="large" />
         <img src={logo} className="App-logo" alt="logo" />
