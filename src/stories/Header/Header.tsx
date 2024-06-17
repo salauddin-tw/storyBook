@@ -6,7 +6,7 @@ interface HeaderProps {
   title?: String
 }
 
-export const Header = ({ title }: HeaderProps) => (
+ const Header = ({ title }: HeaderProps) => (
   <header>
     <div className="storybook-header">
       <div>
@@ -58,3 +58,4 @@ export const Header = ({ title }: HeaderProps) => (
     </div>
   </header>
 )
+export default Header;

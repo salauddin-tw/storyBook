@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react"
 import styled, { css } from "styled-components"
 
@@ -30,9 +31,6 @@ const StyledButton = styled.button<{
 }>`
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  // width: 257px;
-  // height: 56px;
-  // padding: 16px 64px 16px 64px;
   border-radius: 12px;
 
   cursor: pointer;
@@ -64,7 +62,7 @@ const StyledButton = styled.button<{
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+const Button = ({
   primary = false,
   size = "medium",
   backgroundColor,
@@ -75,7 +73,6 @@ export const Button = ({
     <StyledButton
       $primary={primary}
       buttonSize={size}
-      // className={[`storybook-button--${size}`, mode].join(" ")}
       style={{ backgroundColor }}
       {...props}
     >
@@ -83,3 +80,5 @@ export const Button = ({
     </StyledButton>
   )
 }
+
+export default Button;
